@@ -1,3 +1,5 @@
+//this will only open according to your 500 stack
+
 async function getName() {
     const response = await fetch('https://api.blooket.com/api/users/verify-token', {
         method: "GET",
@@ -40,8 +42,9 @@ const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
 (async () => {
     const box = prompt('What box do you want to open? (EXAMPLE: Space)');
-    const amount = prompt('How many boxes do you want to open?');
-
+    const much = prompt('How much is the box you want to open.');
+    const amount = 500/much;
+    alert(`opening ${amount}`);
     const response = await fetch('https://api.blooket.com/api/users/verify-token', { credentials: "include" });
     const data = await response.json();
 
