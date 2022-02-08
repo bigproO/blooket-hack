@@ -34,7 +34,7 @@ async function addCurrencies() {
     });
 
     if (response.status == 200) {
-        alert(`${tokens} tokens and 300 XP added to your account!`);
+        //alert(`${tokens} tokens and 300 XP added to your account!`);
     } else {
         alert('An error occured.');
     };
@@ -45,11 +45,11 @@ while (keepGoing==true){
     const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
     (async () => {
-        if (askedAlready == false){
+        if (askedAlready === false){
          const box = prompt('What box do you want to open? (EXAMPLE: Space)');
          const much = prompt('How much is the box you want to open.');
          const amount = 500/much;
-         alert(`opening ${amount}`);
+         //alert(`opening ${amount}`);
          const response = await fetch('https://api.blooket.com/api/users/verify-token', { credentials: "include" });
          const data = await response.json();
          askedAlready=true;
