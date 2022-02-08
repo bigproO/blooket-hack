@@ -1,5 +1,5 @@
-var keepGoing=true;
-var askedAlready=false;
+let keepGoing=true;
+let askedAlready=false;
 
 
 //this will only open according to your 500 stack
